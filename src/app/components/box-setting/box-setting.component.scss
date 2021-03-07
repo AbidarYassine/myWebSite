@@ -1,0 +1,112 @@
+.settings-box.open {
+    left: 0;
+}
+
+.settings-box {
+    position: fixed;
+    left: -200px;
+    /*proportionelle to width */
+    top: 0;
+    background-color: white;
+    width: 200px;
+    z-index: 10000;
+    min-height: 100vh;
+    transition: .3s;
+}
+
+.settings-box .toggle-setting {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.settings-box .toggle-setting .fa-cog {
+    width: 30px;
+    padding: 8px 0;
+}
+
+.settings-box .setting-container .option-box {
+    padding: 15px;
+    text-align: center;
+    background-color: #EEE;
+    margin: 10px;
+}
+
+.settings-box .setting-container .option-box h4 {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+.settings-box .setting-container .option-box .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.settings-box .setting-container .option-box .colors-list li {
+    width: 24px;
+    height: 24px;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: .6;
+    display: inline-block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.settings-box .setting-container .option-box .colors-list li:first-child {
+    background-color: #FF9800;
+}
+
+.settings-box .setting-container .option-box .colors-list li:nth-child(2) {
+    background-color: #E91E63;
+}
+
+.settings-box .setting-container .option-box .colors-list li:nth-child(3) {
+    background-color: #e910e963;
+}
+
+.settings-box .setting-container .option-box .colors-list li:nth-child(4) {
+    background-color: #1ec0e9;
+}
+
+.settings-box .setting-container .option-box .colors-list li:nth-child(5) {
+    background-color: #06dd2a;
+}
+
+.settings-box .setting-container .option-box .colors-list li.active {
+    opacity: 1;
+    border: 2px solid #fff;
+}
+
+.setting-container .option-box .yes,
+.setting-container .option-box .no {
+    width: 50px;
+    background-color: #1ec0e9;
+    color: #FFF;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+    padding: 4px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.container {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+.option-box .random-back .active {
+    opacity: 1;
+}

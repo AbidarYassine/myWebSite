@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+  .media .avatar-2 {
+    width: 130px;
+  }
+}
+
+@media (max-width: 767px) {
+  .media .avatar-2 {
+    width: 160px;
+  }
+}
+
+.card img.rounded-circle {
+  border-radius: 50%;
+}
+
+#bg_div {
+  height: 100% !important;
+  width: 100% !important;
+  background-image: url("../../../assets/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}

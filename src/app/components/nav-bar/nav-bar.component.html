@@ -1,0 +1,35 @@
+<!--Navbar-->
+<mdb-navbar [ngStyle]="{'background-color': colorSelected}" SideClass="navbar navbar-expand-lg  bg-dark">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a [ngStyle]="{'color': colorSelected}" class="navbar-brand" routerLink="/">ABIDAR YASSINE</a></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/" class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/about" class="nav-link waves-light " mdbWavesEffect>About</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active ">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/education" class="nav-link waves-light" mdbWavesEffect>Education</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active ">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/skills" class="nav-link waves-light" mdbWavesEffect>Skills</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active ">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/certificats" class="nav-link waves-light" mdbWavesEffect>Certificats</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active ">
+                <a [ngStyle]="{'color': colorSelected}" routerLink="/contact" class="nav-link waves-light" mdbWavesEffect>Contact</a>
+            </li>
+        </ul>
+    </links>
+
+
+</mdb-navbar>
+<!--/.Navbar-->

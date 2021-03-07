@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 400px;
+}
+
+.example-header-image-ibm {
+    background-image: url('https://media-exp1.licdn.com/dms/image/C4E0BAQGfKOtAsJ7gOQ/company-logo_200_200/0/1591028793640?e=1621468800&v=beta&t=jhggAPL_sPLSMTwRFsyBOZ9Kgrz1_5KiejmEw-wpmRY');
+    background-size: cover;
+}
+
+.example-card {
+    min-height: 250px;
+}
+
+.example-header-image-an {
+    background-image: url('https://media-exp1.licdn.com/dms/image/C560BAQE35mYimcFCxw/company-logo_200_200/0/1522697288474?e=1621468800&v=beta&t=aJ8MF8gjeoRzig2O-PY2yMEz1UKuNkgcyHeYkd1Tl54');
+    background-size: cover;
+}
+
+.btn_ref {
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.example-header-image-bright {
+    background-image: url('https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:60/https://www.filepicker.io/api/file/4DdOOoLwTI2nEYZZp1jk');
+    background-size: cover;
+}
