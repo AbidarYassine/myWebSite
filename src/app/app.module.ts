@@ -23,7 +23,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { BoxSettingComponent } from './components/box-setting/box-setting.component';
 import {MatFormFieldModule}  from  '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +50,7 @@ import { MatInputModule } from '@angular/material/input';
     MatDividerModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
