@@ -1,5 +1,5 @@
-import { LocalStoragServiceService } from './../../services/local-storag-service.service';
-import { Component, OnInit } from '@angular/core';
+import {LocalStoragServiceService} from './../../services/local-storag-service.service';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-box-setting',
@@ -7,21 +7,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./box-setting.component.scss'],
 })
 export class BoxSettingComponent implements OnInit {
-  constructor(private localStorageService:LocalStoragServiceService) {}
-  opened=false;
-  colors=["#FF9800",'#E91E63','#e910e963','#1ec0e9','#06dd2a']
-  colorSelected='';
+  constructor(private localStorageService: LocalStoragServiceService) {
+  }
+
+  opened = false;
+  colors = ['#0a0ac1', '#f5aa21', '#ab0606', '#139908'];
+  colorSelected = '';
 
   ngOnInit(): void {
-    this.colorSelected= this.localStorageService.getColor();
+    this.localStorageService.getColor().subscribe(res => {
+      this.colorSelected = res;
+    });
   }
+
+  // tslint:disable-next-line:typedef
   toggleBoxSetting() {
     console.log('hi');
-    this.opened=!this.opened;
+    this.opened = !this.opened;
   }
-   getColorSelected(color:any){
-     this.colorSelected=color;
-     this.localStorageService.setColor(color);
-     console.log(color);
+
+  // tslint:disable-next-line:typedef
+  getColorSelected(color: any) {
+    this.localStorageService.setColor(color).subscribe(res => {
+      console.log(res);
+      this.colorSelected = color;
+    });
   }
 }

@@ -3,7 +3,7 @@ $lineColor: blue;
 $fontColor: #fff;
 $bgColor1: #222;
 $bgColor2: #444;
-$yearBgColor: #150404;
+$yearBgColor: var(--main-bg-color);
 $breakpoint: 700px;
 * {
   box-sizing: border-box;
