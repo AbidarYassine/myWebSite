@@ -1,4 +1,3 @@
-
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
@@ -14,16 +13,18 @@ import {SkillsComponent} from './components/skills/skills.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { CertificatComponent } from './components/certificat/certificat.component';
+import {CertificatComponent} from './components/certificat/certificat.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import {MatListModule} from '@angular/material/list'
-import {MatDividerModule} from '@angular/material/divider'
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { BoxSettingComponent } from './components/box-setting/box-setting.component';
-import {MatFormFieldModule}  from  '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+import {MatListModule} from '@angular/material/list';
+import {MatDividerModule} from '@angular/material/divider';
+import {NotFoundComponent} from './components/not-found/not-found.component';
+import {SliderComponent} from './components/slider/slider.component';
+import {BoxSettingComponent} from './components/box-setting/box-setting.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {NgxUsefulSwiperModule} from 'ngx-useful-swiper';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
+    NgxUsefulSwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

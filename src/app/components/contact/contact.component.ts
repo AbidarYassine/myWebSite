@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -7,13 +7,21 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  email:string='';
-  subject:string='';
-  message:string='';
-  constructor() {}
+  email = '';
+  subject = '';
+  message = '';
 
-  ngOnInit(): void {}
-  log(email: any) {
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+  log(email: any): void {
     console.log(email);
+  }
+
+  submitForm(f: any): void {
+    console.log(f.value);
   }
 }

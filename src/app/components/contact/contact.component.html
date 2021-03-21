@@ -1,65 +1,61 @@
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <h1 class="mt-3 text-center text-white">Contact</h1>
-        </div>
+  <div class="row justify-content-center">
+    <h1 class="mt-3 text-center text-white">Contact</h1>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4 col-12 mt-2">
+      <mat-card>
+        <a href="https://api.whatsapp.com/send?phone=+212639564084">
+          <i class="fa fa-phone fa-1x"></i> +212639564084
+        </a>
+      </mat-card>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-3 col-12 mt-2">
-            <mat-card>
-                <a href="https://api.whatsapp.com/send?phone=+212639564084">
-                    <i class="fa fa-phone fa-1x"></i> +212639564084
-                </a>
+    <div class="col-md-4 col-12 mt-2">
+      <mat-card>
 
-            </mat-card>
-        </div>
-        <div class="col-md-3 col-12 mt-2">
-            <mat-card>
-
-                <a href="mailto:yassinabidar201@gmail.com">
-                    <i class="fas fa-envelope-open"></i> yassinabidar201@gmail.com
-                </a>
-            </mat-card>
-        </div>
-
+        <a href="mailto:yassinabidar201@gmail.com">
+          <i class="fas fa-envelope-open"></i> yassinabidar201@gmail.com
+        </a>
+      </mat-card>
     </div>
-    <div class="d-flex justify-content-center">
-        <mat-card style="width:90%" class="example-card mt-2">
-            <mat-card-content>
-                <mat-form-field style="width:100%">
-                    <mat-label>Votre Email Adresse</mat-label>
-                    <input email required ngModel #email="ngModel" (change)="log(email)" name="email" matInput placeholder="pat@example.com" required>
-                    <div *ngIf="email.invalid && email.touched">
-                        <mat-error *ngIf="email.errors?.required">Email Adresse est obligatoire</mat-error>
-                    </div>
-                </mat-form-field>
-                <br>
-                <mat-form-field style="width:100%">
-                    <mat-label>Sujet</mat-label>
-                    <input matInput placeholder="Sujet">
-                </mat-form-field>
-                <mat-form-field style="width:100%">
-                    <mat-label>Sujet</mat-label>
-                    <textarea required ngModel #message="ngModel" name="message" matInput placeholder="message"></textarea>
-                    <div *ngIf="message.invalid && message.touched">
-                        <mat-error *ngIf="message.errors?.required">C'est quoi votre message</mat-error>
-                    </div>
-                </mat-form-field>
-                <br>
-                <!-- <mat-form-field style="width:100%">
-                    <mat-label>Enter your email</mat-label>
-                    <input matInput placeholder="pat@example.com" required>
-                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                </mat-form-field>
-                <br>
-                <mat-form-field style="width:100%">
-                    <mat-label>Enter your email</mat-label>
-                    <input matInput placeholder="pat@example.com" required>
-                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                </mat-form-field> -->
-            </mat-card-content>
-            <button type="button" mdbBtn color="primary" mdbWavesEffect>Send <i class="fas fa-paper-plane"></i></button>
-        </mat-card>
-
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8">
+      <mat-card class="example-card mt-2">
+        <mat-card-content>
+          <form #f="ngForm">
+            <div class="form-group">
+              <label>Votre Email Adresse</label>
+              <input email required ngModel #email="ngModel" (change)="log(email)" name="email" matInput
+                     placeholder="pat@example.com" class="form-control" required>
+              <div *ngIf="email.invalid && email.touched">
+                <mat-error *ngIf="email.errors?.required">Email Adresse est obligatoire !!</mat-error>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+              <label>Sujet</label>
+              <input required ngModel #sujet="ngModel" name="sujet" class="form-control" matInput placeholder="Sujet">
+              <div *ngIf="sujet.invalid && sujet.touched">
+                <mat-error *ngIf="sujet.errors?.required">C'est quoi le sujet?</mat-error>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Sujet</label>
+              <textarea class="form-control" required ngModel #message="ngModel" name="message" matInput
+                        placeholder="message"></textarea>
+              <div *ngIf="message.invalid && message.touched">
+                <mat-error *ngIf="message.errors?.required">C'est quoi votre message?</mat-error>
+              </div>
+            </div>
+            <br>
+          </form>
+        </mat-card-content>
+        <button (click)="submitForm(f)" [disabled]="f.invalid" type="button" mdbBtn color="primary" mdbWavesEffect>Send
+          <i
+            class="fas fa-paper-plane"></i></button>
+      </mat-card>
     </div>
+
+  </div>
 </div>
