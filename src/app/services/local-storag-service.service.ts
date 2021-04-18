@@ -1,32 +1,30 @@
-import {Injectable} from '@angular/core';
-import {Observable, of} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, of, Subject } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStoragServiceService {
+
+  subjectColor = new Subject<string>();
   constructor() {
   }
+  setColor(color: any): Observable<any> {
+    localStorage.setItem('color_option', color);
+    return new Observable((observer) => {
+      observer.next(color);
+    });
+  }
 
-  // tslint:disable-next-line:typedef
-  // setColor(color: any): Observable<any> {
-  //   localStorage.setItem('color_option', color);
-  //   return Observable.caller((observer: { next: (arg0: any) => void; complete: () => void; }) => {
-  //     observer.next(color);
-  //     observer.complete();
-  //   });
-  // }
+  getColor(): Observable<any> {
 
-  // getColor(): Observable<any> {
-  // tslint:disable-next-line:prefer-const
-  // let color = localStorage.getItem('color_option') as any;
-  // if (color == null) {
-  //   color = '#0a0ac1';
-  // }
-  // return Observable.caller((observer: { next: (arg0: any) => void; complete: () => void; }) => {
-  //   observer.next(color);
-  //   observer.complete();
-  // });
-  // }
+    let color = localStorage.getItem('color_option') as any;
+    if (color == null) {
+      color = '#0a0ac1';
+    }
+    return new Observable((observer) => {
+      observer.next(color);
+    });
+  }
 }

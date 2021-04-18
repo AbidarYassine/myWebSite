@@ -1,5 +1,5 @@
-import {LocalStoragServiceService} from './../../services/local-storag-service.service';
-import {Component, OnInit} from '@angular/core';
+import { LocalStoragServiceService } from './../../services/local-storag-service.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-slider',
@@ -14,10 +14,13 @@ export class SliderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.localStorageService.getColor().subscribe(res => {
-    //   this.colorSelected = res;
-    // });
-    // console.log(this.colorSelected);
+    this.localStorageService.getColor().subscribe(res => {
+      this.colorSelected = res;
+    });
+    this.localStorageService.subjectColor.subscribe(color => {
+      this.colorSelected = color;
+      console.log("color ta3 observable " + this.colorSelected);
+    });
   }
 
 }

@@ -1,5 +1,5 @@
-import {LocalStoragServiceService} from './../../services/local-storag-service.service';
-import {Component, OnInit} from '@angular/core';
+import { LocalStoragServiceService } from './../../services/local-storag-service.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -14,10 +14,19 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.localStorageService.getColor().subscribe(res => {
-    //   this.colorSelected = res;
-    // });
-    // console.log(this.colorSelected);
+    this.localStorageService.getColor().subscribe(res => {
+      this.colorSelected = res;
+    });
+
+    this.localStorageService.subjectColor.subscribe(color => {
+      console.log(color);
+      if (!color) {
+        this.colorSelected = '#0a0ac1';
+      } else {
+        this.colorSelected = color;
+      }
+    });
+
   }
 
 }

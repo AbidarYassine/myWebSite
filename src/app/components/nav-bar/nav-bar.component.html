@@ -38,7 +38,7 @@
 <!--</mdb-navbar>-->
 <!--&lt;!&ndash;/.Navbar&ndash;&gt;-->
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+<mdb-navbar [ngClass]="['background-color', 'colorSelected']" SideClass="navbar navbar-expand-lg navbar-dark indigo">
 
   <!-- Navbar brand -->
   <mdb-navbar-brand><a class=" navbar-brand" routerLink="/">Abidar Yassine</a></mdb-navbar-brand>
@@ -49,8 +49,7 @@
     <!-- Links -->
     <ul class="navbar-nav ml-auto cl-effect-4">
       <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
-        <a routerLink="/" class="nav-link waves-light" mdbWavesEffect>Accuiel<span
-          class="sr-only">(current)</span></a>
+        <a routerLink="/" class="nav-link waves-light" mdbWavesEffect>Accuiel<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a href="#about" target="_self" class="nav-link waves-light " mdbWavesEffect>A
@@ -60,8 +59,7 @@
         <a href="#education" target="_self" class="nav-link waves-light" mdbWavesEffect>Education</a>
       </li>
       <li class="nav-item" routerLinkActive="active ">
-        <a href="#skills" target="_self" class="nav-link waves-light"
-           mdbWavesEffect>Skills</a>
+        <a href="#skills" target="_self" class="nav-link waves-light" mdbWavesEffect>Skills</a>
       </li>
       <li class="nav-item" routerLinkActive="active ">
         <a routerLink="/certificats" class="nav-link waves-light" mdbWavesEffect>Certificats</a>

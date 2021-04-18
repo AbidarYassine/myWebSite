@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {SwiperOptions} from 'swiper';
+import { Component, OnInit } from '@angular/core';
+import { SwiperOptions } from 'swiper';
 // @ts-ignore
 import AOS from 'aos';
+import { LocalStoragServiceService } from 'src/app/services/local-storag-service.service';
 
 @Component({
   selector: 'app-skills',
@@ -43,13 +44,24 @@ export class SkillsComponent implements OnInit {
       modifier: 5
     }
   };
-
-  constructor() {
+  colorSelected = '';
+  constructor(private localStorageService: LocalStoragServiceService) {
   }
 
   // tslint:disable-next-line:typedef
   ngOnInit(): void {
     AOS.init();
+    this.localStorageService.getColor().subscribe(res => {
+      this.colorSelected = res;
+    });
+    this.localStorageService.subjectColor.subscribe(color => {
+      console.log(color);
+      if (!color) {
+        this.colorSelected = '#0a0ac1';
+      } else {
+        this.colorSelected = color;
+      }
+    });
   }
 
 }
