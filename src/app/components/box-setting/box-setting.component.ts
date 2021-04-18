@@ -15,9 +15,9 @@ export class BoxSettingComponent implements OnInit {
   colorSelected = '';
 
   ngOnInit(): void {
-    this.localStorageService.getColor().subscribe(res => {
-      this.colorSelected = res;
-    });
+    // this.localStorageService.getColor().subscribe(res => {
+    //   this.colorSelected = res;
+    // });
   }
 
   // tslint:disable-next-line:typedef
@@ -28,9 +28,9 @@ export class BoxSettingComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getColorSelected(color: any) {
-    this.localStorageService.setColor(color).subscribe(res => {
-      console.log(res);
-      this.colorSelected = color;
-    });
+    // this.localStorageService.setColor(color).subscribe(res => {
+    //   console.log(res);
+    //   this.colorSelected = color;
+    // });
   }
 }

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+// @ts-ignore
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-education',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
 }

@@ -14,10 +14,10 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.localStorageService.getColor().subscribe(res => {
-      this.colorSelected = res;
-    });
-    console.log(this.colorSelected);
+    // this.localStorageService.getColor().subscribe(res => {
+    //   this.colorSelected = res;
+    // });
+    // console.log(this.colorSelected);
   }
 
 }

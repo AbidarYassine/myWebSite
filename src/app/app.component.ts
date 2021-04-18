@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-// @ts-ignore
-import * as AOS from 'aos';
+import {LocalStoragServiceService} from './services/local-storag-service.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,11 +8,13 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'portfolioWebSite';
+  constructor(private localStorageService: LocalStoragServiceService) {
+  }
+
+  title = 'Abidar Yassine';
   bounce: any;
 
   ngOnInit(): void {
-    AOS.init();
   }
 
   // tslint:disable-next-line:typedef
